@@ -1,0 +1,129 @@
+:root {
+  --font: 'Anton', sans-serif;
+  --dark-brown: #52471D;
+  --light-brown: #E66E48;
+  --lavande: #494D9E;
+}
+
+
+* {
+
+    box-sizing: border-box;
+}
+
+body {
+    /* https://www.toptal.com/designers/subtlepatterns/moroccan-flower-dark-pattern/ */
+    background-image: url(moroccan-flower-dark.png);
+    background-repeat: inherit;
+    align-items: center;
+}
+
+.app {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    padding: 20px;
+    width: 600px;
+    transform: translate(-50%,-50%);
+     box-sizing: content-box;
+     background: rgba(255, 255, 255, 0.6);
+     border-radius: 20px;
+     text-align: center;
+}
+
+header {
+    padding: 30px;
+    font-size: xx-large;
+    font-family: var(--font);
+}
+
+.quotes {
+    font-family: 'Dancing Script', cursive;
+    font-size: x-large;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-justify: inter-word;
+}
+
+.new-quote { 
+  margin-top: -10px;
+  margin-bottom: 15px;
+  padding: 5px 30px;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: var(--font);
+  background-color: var(--light-brown) ;
+  color: black;
+  border-radius: 10px;
+}
+
+.new-quote:disabled {
+    background-color: var(--light-brown);
+    color: var(--lavande);
+    cursor: not-allowed;
+}
+
+.new-quote:hover {
+  color: var(--light-brown);
+  background-color: transparent;
+}
+
+.tweeter button {
+  margin: 10px 5px 5px 5px;
+  size: 20px;
+}
+
+.spinner {
+    margin: 35px auto;
+    width: 30px;
+    height: 30px;
+    position: relative;
+  }
+
+.spinner.hidden {
+    visibility: hidden;
+}
+  
+  .cube1, .cube2 {
+    background-color: #333;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+    animation: sk-cubemove 1.8s infinite ease-in-out;
+  }
+  
+  .cube2 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+  }
+  
+  @-webkit-keyframes sk-cubemove {
+    25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+    50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+    75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+    100% { -webkit-transform: rotate(-360deg) }
+  }
+  
+  @keyframes sk-cubemove {
+    25% { 
+      transform: translateX(42px) rotate(-90deg) scale(0.5);
+      -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+    } 50% { 
+      transform: translateX(42px) translateY(42px) rotate(-179deg);
+      -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+    } 50.1% { 
+      transform: translateX(42px) translateY(42px) rotate(-180deg);
+      -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+    } 75% { 
+      transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+      -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    } 100% { 
+      transform: rotate(-360deg);
+      -webkit-transform: rotate(-360deg);
+    }
+  }
